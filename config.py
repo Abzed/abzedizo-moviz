@@ -18,9 +18,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_ONYX_URL")
-    
- 
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/watchlist_test'
